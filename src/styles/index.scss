@@ -1,7 +1,16 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import 'variables';
+@import 'colors';
 
 body {
-  background-color: white;
+  background-color: $blue;
+}
+
+.playerImg {
+  width: 100px;
+}
+
+.title {
+  color: $yellow;
 }
