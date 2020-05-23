@@ -21,7 +21,7 @@ class Player extends React.Component {
     const { player } = this.props;
 
     return (
-      <div className="Player col-3 p-3">
+      <div className="Player col-md-3 p-3">
         <div className="card mb-3">
           <div className="row no-gutters">
             <div className="col-md-4 d-flex align-items-center">
