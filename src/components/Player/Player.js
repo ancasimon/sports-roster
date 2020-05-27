@@ -21,7 +21,7 @@ class Player extends React.Component {
     const { player } = this.props;
 
     return (
-      <div className="Player col-md-3 p-3">
+      <div className="Player col-lg-3 p-3">
         <div className="card mb-3">
           <div className="row no-gutters">
             <div className="col-md-4 d-flex align-items-center">
@@ -32,7 +32,7 @@ class Player extends React.Component {
                 <h5 className="card-title">{player.name}</h5>
                 <h6 className="card-text font-italic">{player.position}</h6>
                 <div className="row justify-content-around">
-                  <button className="btn blue"><i class="fas fa-user-edit"></i></button>
+                  <button className="btn blue"><i className="fas fa-user-edit"></i></button>
                   <button className="btn btn-danger" onClick={this.deletePlayerEvent}><i className="fas fa-trash"></i></button>
                 </div>
               </div>
