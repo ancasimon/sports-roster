@@ -7,7 +7,8 @@ import './PlayerForm.scss';
 
 class PlayerForm extends React.Component {
   static propTypes = {
-    players: PropTypes.array,
+    players: PropTypes.array.isRequired,
+    saveNewPlayer: PropTypes.func.isRequired,
   }
 
   state = {
