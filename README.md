@@ -34,6 +34,6 @@ Axios, Bootstrap, CSS, ES6 Modules, ESLint, Firebase (for authentication and dat
 1. In your browser, navigate to `http://localhost:9999`.
 
 ## Firebase Deployment
-Thsi project has been deployed with Firebase. You can find it here: https://sportsroster-76450.web.app.
+This project has been deployed with Firebase. You can find it here: https://sportsroster-76450.web.app.
 
 
