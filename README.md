@@ -1,4 +1,5 @@
 # Sports Roster
+[SportsRoster](https://sportsroster-76450.web.app)
 
 ## Description
 This project is an exploration into coding CRUD functions (create, read, update, delete) in a React project, while using a Firebase database for user authentication and data management. Project instructions can be found [here](https://github.com/nss-nightclass-projects/exercise-vault/blob/master/REACT_sports_roster.md).
@@ -27,10 +28,12 @@ Axios, Bootstrap, CSS, ES6 Modules, ESLint, Firebase (for authentication and dat
 
 ## How to Run
 1. Clone down this repo.
+1. Create apiKeys.json file using the template apiKeysExample.json with your own firebase keys added.
 1. Make sure you have http-server installed via npm. If not, get it [here](https://www.npmjs.com/package/http-server).
 1. On your command line, run `hs -p 9999`.
 1. In your browser, navigate to `http://localhost:9999`.
 
-
+## Firebase Deployment
+Thsi project has been deployed with Firebase. You can find it here: https://sportsroster-76450.web.app.
 
 
