@@ -9,12 +9,28 @@ class PlayerForm extends React.Component {
   static propTypes = {
     players: PropTypes.array.isRequired,
     saveNewPlayer: PropTypes.func.isRequired,
+    player: PropTypes.object.isRequired,
   }
 
   state = {
     playerName: '',
     playerImageUrl: '',
     playerPosition: '',
+    playerSequence: '',
+    isEditing: false,
+  }
+
+  componentDidMount() {
+    const { player } = this.props;
+    if (player.name) {
+      this.setState({
+        playerImageUrl: player.imageUrl,
+        playerName: player.name,
+        playerPosition: player.position,
+        playerSequence: player.sequence,
+        isEditing: true,
+      });
+    }
   }
 
   playerNameChange = (e) => {
@@ -46,8 +62,32 @@ class PlayerForm extends React.Component {
     saveNewPlayer(newPlayer);
   }
 
+  updatePlayer = (e) => {
+    e.preventDefault();
+    const { player, putPlayer } = this.props;
+    const {
+      playerImageUrl,
+      playerName,
+      playerPosition,
+      playerSequence,
+    } = this.state;
+    const updatedPlayer = {
+      imageUrl: playerImageUrl,
+      name: playerName,
+      position: playerPosition,
+      uid: authData.getUid(),
+      sequence: playerSequence,
+    };
+    putPlayer(player.id, updatedPlayer);
+  }
+
   render() {
-    const { playerName, playerImageUrl, playerPosition } = this.state;
+    const {
+      playerName,
+      playerImageUrl,
+      playerPosition,
+      isEditing,
+    } = this.state;
 
     return (
       <div>
@@ -87,7 +127,11 @@ class PlayerForm extends React.Component {
                 />
             </div>
           </div>
-          <button className="btn btn-warning white btn-lg" onClick={this.savePlayer}>Add New Player to the Most Awesome Soccer Team Ever</button>
+          {
+          isEditing
+            ? <button className="btn btn-primary white btn-lg" onClick={this.updatePlayer}>Save Your Changes</button>
+            : <button className="btn btn-warning white btn-lg" onClick={this.savePlayer}>Add New Player to the Most Awesome Soccer Team Ever</button>
+          }
         </form>
       </div>
     );
