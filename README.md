@@ -1,5 +1,5 @@
 # Sports Roster
-[SportsRoster](https://sportsroster-76450.web.app)
+[Check it out here!](https://sportsroster-76450.web.app)
 
 ## Description
 This project is an exploration into coding CRUD functions (create, read, update, delete) in a React project, while using a Firebase database for user authentication and data management. Project instructions can be found [here](https://github.com/nss-nightclass-projects/exercise-vault/blob/master/REACT_sports_roster.md).
@@ -23,7 +23,7 @@ Steaua of the later '80s and early '90s is the amazing soccer team I grew up wit
 1. Users can edit a player's details. 
 1. Users can delete players. 
 
-## Technologies & Tools
+## Tools & Technologies
 Axios, Bootstrap, CSS, ES6 Modules, ESLint, Firebase (for authentication and data management), Github (for version control), Google login authentication, HTML5, JavaScript, React, Webpack
 
 ## How to Run
